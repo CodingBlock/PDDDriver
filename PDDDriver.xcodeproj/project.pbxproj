@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* PDDDriverAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PDDDriverAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* PDDDriverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* PDDDriverViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* PDDDriverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* PDDDriverViewController.m */; };
+		9E02D45A1329335C0098F4AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E02D4591329335C0098F4AA /* QuartzCore.framework */; };
+		9E0E5086133933C300FF5B42 /* PDDDecisionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0E5085133933C300FF5B42 /* PDDDecisionManager.m */; };
+		9E12F6761337C394008DB222 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F6251337C394008DB222 /* ASIAuthenticationDialog.m */; };
+		9E12F6771337C394008DB222 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F6281337C394008DB222 /* ASIDataCompressor.m */; };
+		9E12F6781337C394008DB222 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F62A1337C394008DB222 /* ASIDataDecompressor.m */; };
+		9E12F6791337C394008DB222 /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F62C1337C394008DB222 /* ASIDownloadCache.m */; };
+		9E12F67A1337C394008DB222 /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F62E1337C394008DB222 /* ASIFormDataRequest.m */; };
+		9E12F67B1337C394008DB222 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F6301337C394008DB222 /* ASIHTTPRequest.m */; };
+		9E12F67C1337C394008DB222 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F6341337C394008DB222 /* ASIInputStream.m */; };
+		9E12F67D1337C394008DB222 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F6361337C394008DB222 /* ASINetworkQueue.m */; };
+		9E12F69C1337C427008DB222 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E12F69B1337C427008DB222 /* CFNetwork.framework */; };
+		9E12F69E1337C436008DB222 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E12F69D1337C436008DB222 /* SystemConfiguration.framework */; };
+		9E12F6A21337C459008DB222 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E12F6A11337C459008DB222 /* MobileCoreServices.framework */; };
+		9E12F6A41337C4C6008DB222 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E12F6A31337C4C6008DB222 /* libz.dylib */; };
+		9E12F6A81337C519008DB222 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E12F6A71337C519008DB222 /* Reachability.m */; };
+		9EA82F24132E59B2006BD9FE /* PDDArduinoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA82F23132E59B2006BD9FE /* PDDArduinoController.m */; };
+		9ECAB4B513203A0600011242 /* PDDSerialCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAB4B413203A0600011242 /* PDDSerialCommunicationManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* PDDDriverAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDDriverAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* PDDDriverAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDDriverAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* PDDDriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PDDDriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* PDDDriverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDDDriverViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* PDDDriverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDDriverViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* PDDDriverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDDriverViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* PDDDriver_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDDriver_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* PDDDriver-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PDDDriver-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9E02D4591329335C0098F4AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9E0E508113392D3000FF5B42 /* PDDDataStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDDataStructures.h; sourceTree = "<group>"; };
+		9E0E5084133933C300FF5B42 /* PDDDecisionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDDecisionManager.h; sourceTree = "<group>"; };
+		9E0E5085133933C300FF5B42 /* PDDDecisionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDDecisionManager.m; sourceTree = "<group>"; };
+		9E12F6241337C394008DB222 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		9E12F6251337C394008DB222 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		9E12F6261337C394008DB222 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
+		9E12F6271337C394008DB222 /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
+		9E12F6281337C394008DB222 /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
+		9E12F6291337C394008DB222 /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
+		9E12F62A1337C394008DB222 /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
+		9E12F62B1337C394008DB222 /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
+		9E12F62C1337C394008DB222 /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
+		9E12F62D1337C394008DB222 /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		9E12F62E1337C394008DB222 /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		9E12F62F1337C394008DB222 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		9E12F6301337C394008DB222 /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		9E12F6311337C394008DB222 /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		9E12F6321337C394008DB222 /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		9E12F6331337C394008DB222 /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		9E12F6341337C394008DB222 /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		9E12F6351337C394008DB222 /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		9E12F6361337C394008DB222 /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		9E12F6371337C394008DB222 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		9E12F69B1337C427008DB222 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9E12F69D1337C436008DB222 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9E12F69F1337C44F008DB222 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		9E12F6A11337C459008DB222 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9E12F6A31337C4C6008DB222 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9E12F6A61337C519008DB222 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		9E12F6A71337C519008DB222 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		9EA82F22132E59B2006BD9FE /* PDDArduinoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDDArduinoController.h; path = Classes/PDDArduinoController.h; sourceTree = SOURCE_ROOT; };
+		9EA82F23132E59B2006BD9FE /* PDDArduinoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDDArduinoController.m; path = Classes/PDDArduinoController.m; sourceTree = SOURCE_ROOT; };
+		9ECAB4B313203A0600011242 /* PDDSerialCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDDSerialCommunicationManager.h; path = Classes/PDDSerialCommunicationManager.h; sourceTree = SOURCE_ROOT; };
+		9ECAB4B413203A0600011242 /* PDDSerialCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDDSerialCommunicationManager.m; path = Classes/PDDSerialCommunicationManager.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E12F6A41337C4C6008DB222 /* libz.dylib in Frameworks */,
+				9E12F6A21337C459008DB222 /* MobileCoreServices.framework in Frameworks */,
+				9E12F69E1337C436008DB222 /* SystemConfiguration.framework in Frameworks */,
+				9E12F69C1337C427008DB222 /* CFNetwork.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				9E02D45A1329335C0098F4AA /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9E12F6A51337C519008DB222 /* Reachability */,
+				9E12F6231337C37A008DB222 /* ASIHTTPRequest */,
+				9ECAB4AA132039AB00011242 /* Serial Communication */,
+				9E01E7021339105A00602CBF /* Arduino */,
+				28D7ACF60DDB3853001CB0EB /* PDDDriverViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* PDDDriverViewController.m */,
+				1D3623240D0F684500981E51 /* PDDDriverAppDelegate.h */,
+				1D3623250D0F684500981E51 /* PDDDriverAppDelegate.m */,
+				9E0E5084133933C300FF5B42 /* PDDDecisionManager.h */,
+				9E0E5085133933C300FF5B42 /* PDDDecisionManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* PDDDriver.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* PDDDriver_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E5210DE3E06400AC0155 /* PDDDriverViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* PDDDriver-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E12F6A31337C4C6008DB222 /* libz.dylib */,
+				9E12F6A11337C459008DB222 /* MobileCoreServices.framework */,
+				9E12F69F1337C44F008DB222 /* libz.1.2.3.dylib */,
+				9E12F69D1337C436008DB222 /* SystemConfiguration.framework */,
+				9E12F69B1337C427008DB222 /* CFNetwork.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				9E02D4591329335C0098F4AA /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E01E7021339105A00602CBF /* Arduino */ = {
+			isa = PBXGroup;
+			children = (
+				9EA82F22132E59B2006BD9FE /* PDDArduinoController.h */,
+				9EA82F23132E59B2006BD9FE /* PDDArduinoController.m */,
+				9E0E508113392D3000FF5B42 /* PDDDataStructures.h */,
+			);
+			name = Arduino;
+			sourceTree = "<group>";
+		};
+		9E12F6231337C37A008DB222 /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				9E12F6241337C394008DB222 /* ASIAuthenticationDialog.h */,
+				9E12F6251337C394008DB222 /* ASIAuthenticationDialog.m */,
+				9E12F6261337C394008DB222 /* ASICacheDelegate.h */,
+				9E12F6271337C394008DB222 /* ASIDataCompressor.h */,
+				9E12F6281337C394008DB222 /* ASIDataCompressor.m */,
+				9E12F6291337C394008DB222 /* ASIDataDecompressor.h */,
+				9E12F62A1337C394008DB222 /* ASIDataDecompressor.m */,
+				9E12F62B1337C394008DB222 /* ASIDownloadCache.h */,
+				9E12F62C1337C394008DB222 /* ASIDownloadCache.m */,
+				9E12F62D1337C394008DB222 /* ASIFormDataRequest.h */,
+				9E12F62E1337C394008DB222 /* ASIFormDataRequest.m */,
+				9E12F62F1337C394008DB222 /* ASIHTTPRequest.h */,
+				9E12F6301337C394008DB222 /* ASIHTTPRequest.m */,
+				9E12F6311337C394008DB222 /* ASIHTTPRequestConfig.h */,
+				9E12F6321337C394008DB222 /* ASIHTTPRequestDelegate.h */,
+				9E12F6331337C394008DB222 /* ASIInputStream.h */,
+				9E12F6341337C394008DB222 /* ASIInputStream.m */,
+				9E12F6351337C394008DB222 /* ASINetworkQueue.h */,
+				9E12F6361337C394008DB222 /* ASINetworkQueue.m */,
+				9E12F6371337C394008DB222 /* ASIProgressDelegate.h */,
+			);
+			name = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		9E12F6A51337C519008DB222 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				9E12F6A61337C519008DB222 /* Reachability.h */,
+				9E12F6A71337C519008DB222 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		9ECAB4AA132039AB00011242 /* Serial Communication */ = {
+			isa = PBXGroup;
+			children = (
+				9ECAB4B313203A0600011242 /* PDDSerialCommunicationManager.h */,
+				9ECAB4B413203A0600011242 /* PDDSerialCommunicationManager.m */,
+			);
+			name = "Serial Communication";
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* PDDDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PDDDriver" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PDDDriver;
+			productName = PDDDriver;
+			productReference = 1D6058910D05DD3D006BFB54 /* PDDDriver.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PDDDriver" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* PDDDriver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* PDDDriverViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* PDDDriverAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* PDDDriverViewController.m in Sources */,
+				9ECAB4B513203A0600011242 /* PDDSerialCommunicationManager.m in Sources */,
+				9EA82F24132E59B2006BD9FE /* PDDArduinoController.m in Sources */,
+				9E12F6761337C394008DB222 /* ASIAuthenticationDialog.m in Sources */,
+				9E12F6771337C394008DB222 /* ASIDataCompressor.m in Sources */,
+				9E12F6781337C394008DB222 /* ASIDataDecompressor.m in Sources */,
+				9E12F6791337C394008DB222 /* ASIDownloadCache.m in Sources */,
+				9E12F67A1337C394008DB222 /* ASIFormDataRequest.m in Sources */,
+				9E12F67B1337C394008DB222 /* ASIHTTPRequest.m in Sources */,
+				9E12F67C1337C394008DB222 /* ASIInputStream.m in Sources */,
+				9E12F67D1337C394008DB222 /* ASINetworkQueue.m in Sources */,
+				9E12F6A81337C519008DB222 /* Reachability.m in Sources */,
+				9E0E5086133933C300FF5B42 /* PDDDecisionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jan Willem de Birk (DUV6R33L92)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Willem de Birk (DUV6R33L92)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PDDDriver_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "PDDDriver-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = PDDDriver;
+				PROVISIONING_PROFILE = "1249A731-BD72-4B12-881D-76EB840BAF5D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1249A731-BD72-4B12-881D-76EB840BAF5D";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv6 i386";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jan Willem de Birk (DUV6R33L92)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Willem de Birk (DUV6R33L92)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PDDDriver_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "PDDDriver-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = PDDDriver;
+				PROVISIONING_PROFILE = "1249A731-BD72-4B12-881D-76EB840BAF5D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1249A731-BD72-4B12-881D-76EB840BAF5D";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv6 i386";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jan Willem de Birk (DUV6R33L92)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Willem de Birk (DUV6R33L92)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "1249A731-BD72-4B12-881D-76EB840BAF5D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1249A731-BD72-4B12-881D-76EB840BAF5D";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jan Willem de Birk (DUV6R33L92)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jan Willem de Birk (DUV6R33L92)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "1249A731-BD72-4B12-881D-76EB840BAF5D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1249A731-BD72-4B12-881D-76EB840BAF5D";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PDDDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PDDDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

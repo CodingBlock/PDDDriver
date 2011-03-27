@@ -1,0 +1,19 @@
+//
+// Prefix header for all source files of the 'PDDDriver' target in the 'PDDDriver' project
+//
+
+#ifdef __OBJC__
+    #include "TargetConditionals.h"
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+
+    #define _PDDDebugMessageNotification_   @"PDDDebugMessageNotification"
+    #define _PDDRemoteURLBase_              @"http://10.0.1.7/PDDDiagnostics/"
+
+    #if TARGET_IPHONE_SIMULATOR
+        #define PDDDebugMode 1
+    #else
+        #define PDDDebugMode 0
+    #endif
+
+#endif
