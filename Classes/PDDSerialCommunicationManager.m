@@ -168,13 +168,13 @@ error:
 	if( [self internalSendSerialCommand:_PDDSerialCommunicationTokenSYN_] )
 	{
 		connectionAvailable = YES;
-		
-		// TODO: do a remote setup now we have communication
-		//[self internalSendSerialCommand:_PDDSerialCommunicationTokenSpeedOffset_];
-		
+				
 		// a connection has been established; send a notification to the delegate
 		if( [delegate respondsToSelector:@selector(serialConnectionEstablished)] )
 			[delegate performSelectorOnMainThread:@selector(serialConnectionEstablished) withObject:nil waitUntilDone:NO];
+        
+        // let observers know of this event
+        [[NSNotificationCenter defaultCenter] postNotificationName:_PDDSerialConnectionEstablishedNotification_ object:nil];
 	}else{
 		connectionAvailable = NO;
 		

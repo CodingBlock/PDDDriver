@@ -7,37 +7,39 @@
 //
 
 #import "PDDDriverViewController.h"
-#import "PDDArduinoController.h"
+#import "PDDDataStructures.h"
+#import "PDDDecisionManager.h"
+#import "PDDLogViewController.h"
 
 @implementation PDDDriverViewController
-@synthesize serialCommunicationManager;
-@synthesize arduinoController;
-@synthesize activityIndicator;
-@synthesize logTextView;
-@synthesize logButton;
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [super dealloc];
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 	
-    // set up log text view
-    [logTextView setText:@"Initializing..."];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTextView:) name:_PDDDebugMessageNotification_ object:nil];
+    // register as an observer for special events
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEstablishSerialConnectionWithNotification:) name:_PDDSerialConnectionEstablishedNotification_ object:nil];
     
-	// create a serial communication manager, assign as delegate and wait for a connection to be established
-	serialCommunicationManager = [[PDDSerialCommunicationManager alloc] initWithDelegate:self];
-	
-	// nil arduino controller
-	arduinoController = nil;
+    // setup PDDLogViewController
+    PDDLogViewController *logViewController = [[PDDLogViewController alloc] initWithNibName:@"PDDLogViewController" bundle:nil];
+    
+    // setup navigation UI
+    [self pushViewController:logViewController animated:NO];
+    
+    [logViewController release], logViewController = nil;
 }
 
-/*
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -47,69 +49,24 @@
 }
 
 - (void)viewDidUnload {
-    [self setLogTextView:nil];
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
 
-
-- (void)dealloc {
-    [logTextView release];
-    [super dealloc];
-}
-
 #pragma mark -
-#pragma mark PDDSerialCommunicationManagerProtocol
-- (void)serialConnectionEstablished
+#pragma mark Events
+- (void)didEstablishSerialConnectionWithNotification:(NSNotification *)notification
 {
-    // send debug info
-    [[NSNotificationCenter defaultCenter] postNotificationName:_PDDDebugMessageNotification_ object:@"Serial Connection Established"];
+    // TODO: init camera and push camera module to start making decisions
+    NSLog(@"*** init camera module");
     
-	// create an arduino controller to push changes to the Arduino (and do some calculations)
-	if( arduinoController == nil )
-        arduinoController = [[PDDArduinoController alloc] initWithSerialCommunicationManager:serialCommunicationManager];
-
-	
-	// TODO: init camera stuff and the logic behind it (decision base)
-		
-	// enable button for test purposes
-	logButton.enabled = YES;
-}
-
-- (void)serialCommandFailed:(NSString *)command
-{	
-	// do nothing here? pass on to arduino controller?
-    // send debug info
-    [[NSNotificationCenter defaultCenter] postNotificationName:_PDDDebugMessageNotification_ object:@"Serial Command Failed"];
-}
-
-- (void)serialCommandSuccess:(NSString *)command
-{
-    // send debug info
-    [[NSNotificationCenter defaultCenter] postNotificationName:_PDDDebugMessageNotification_ object:[NSString stringWithFormat:@"Serial Command Succes (%@)", command]];
     
-	if( arduinoController != nil )
-		[arduinoController serialCommandSuccess:command];
-}
-
-#pragma mark -
-#pragma mark Text Code
-- (IBAction)sendLog
-{
-    [activityIndicator startAnimating];
-
-    // save current log
-    [arduinoController saveLogs];
+    // TODO: remove this
+    // as a little test, push a decision
+    sleep(2);
     
-    [activityIndicator stopAnimating];
-}
-
-- (void)updateTextView:(NSNotification *)notification
-{
-    NSMutableString *logText = [[logTextView text] mutableCopy];
-    [logText appendFormat:@"\n%@", [notification object]];
-    [logTextView performSelectorOnMainThread:@selector(setText:) withObject:logText waitUntilDone:YES];
-    [logText release];
+    Decision decision = PDDDecisionMake(0.2, ArduinoAccelerationModeAccelerate, ArduinoMotorDirectionFoward, ArduinoSteeringModeNone);
+    [[PDDDecisionManager defaultManager] setDecision:decision];
 }
 
 @end

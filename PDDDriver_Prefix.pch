@@ -7,9 +7,14 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 
-    #define _PDDDebugMessageNotification_   @"PDDDebugMessageNotification"
+    // global notifications
+    #define _PDDDebugMessageNotification_                   @"PDDDebugMessageNotification"
+    #define _PDDSerialConnectionEstablishedNotification_    @"PDDSerialConnectionEstablishedNotification"
+
+    // global remote-base define
     #define _PDDRemoteURLBase_              @"http://10.0.1.7/PDDDiagnostics/"
 
+    // debug settings
     #if TARGET_IPHONE_SIMULATOR
         #define PDDDebugMode 1
     #else

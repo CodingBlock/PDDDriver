@@ -27,7 +27,7 @@
 	[super dealloc];
 }
 
-- (id)initWithSerialCommunicationManager:(PDDSerialCommunicationManager *)manager
+- (id)init
 {
 	if( (self = [super init]) )
 	{
@@ -37,21 +37,11 @@
             serialACKLog    = [[NSMutableArray alloc] init];
             serialSendLog   = [[NSMutableArray alloc] init];
         }
-		// set serial communication manager
-		// TODO: maybe move the init of the serial comm manager to here?
-		serialCommunicationManager = manager;
-		
-		// set defaults
-        softwareInterrupt = NO;
-		serialCommandInProgress = NO;
-		queuedSteeringMode = NSIntegerMin;
-		queuedMotorDirection = NSIntegerMin;
-		
-		// set a default arduino state (bare minimum)
-		arduinoState = PDDArduinoStateMake(0, 0, _PDDDefaultMotorOffset_, 0, ArduinoMotorDirectionFoward, ArduinoSteeringModeNone);
-		
-		// spawn an 'arduinoLoop' in a new thread
-		[NSThread detachNewThreadSelector:@selector(arduinoLoop) toTarget:self withObject:nil];
+        
+		// init serial communication manager
+		serialCommunicationManager = [[PDDSerialCommunicationManager alloc] initWithDelegate:self];
+        
+        // now wait for a serial connection
 	}
 	
 	return self;
@@ -382,12 +372,36 @@
 	}
 	
 	serialCommandInProgress = NO;
+    
+    // send debug info
+    [[NSNotificationCenter defaultCenter] postNotificationName:_PDDDebugMessageNotification_ object:[NSString stringWithFormat:@"Serial Command Succes (%@)", command]];
 }
 
 - (void)serialCommandFailed:(NSString *)command
 {
 	// do not save anything, just set the serial pending state to NO
 	serialCommandInProgress = NO;
+    
+    // send debug info
+    [[NSNotificationCenter defaultCenter] postNotificationName:_PDDDebugMessageNotification_ object:@"Serial Command Failed"];
+}
+
+- (void)serialConnectionEstablished
+{
+    // set defaults
+    softwareInterrupt = NO;
+    serialCommandInProgress = NO;
+    queuedSteeringMode = NSIntegerMin;
+    queuedMotorDirection = NSIntegerMin;
+    
+    // set a default arduino state (bare minimum)
+    arduinoState = PDDArduinoStateMake(0, 0, _PDDDefaultMotorOffset_, 0, ArduinoMotorDirectionFoward, ArduinoSteeringModeNone);
+    
+    // spawn an 'arduinoLoop' in a new thread
+    [NSThread detachNewThreadSelector:@selector(arduinoLoop) toTarget:self withObject:nil];
+    
+    // send debug info
+    [[NSNotificationCenter defaultCenter] postNotificationName:_PDDDebugMessageNotification_ object:@"Serial Connection Established"];
 }
 
 #pragma -

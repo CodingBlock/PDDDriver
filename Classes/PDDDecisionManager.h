@@ -15,7 +15,7 @@ typedef enum {
     PDDDecisionModeRemote,
 } PDDDecisionMode;
 
-#define _PDDDecisionMode_   PDDDecisionModeRemote
+#define _PDDDecisionMode_   PDDDecisionModeCamera
 
 @interface PDDDecisionManager : NSObject {
     Decision _internalDecision;

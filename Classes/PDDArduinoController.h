@@ -34,12 +34,9 @@
 @property ArduinoSteeringMode queuedSteeringMode;
 
 @property BOOL serialCommandInProgress;
-@property (nonatomic, assign) PDDSerialCommunicationManager *serialCommunicationManager;
+@property (nonatomic, retain) PDDSerialCommunicationManager *serialCommunicationManager;
 @property (nonatomic, retain) NSMutableArray *serialSendLog, *serialACKLog;
 @property BOOL softwareInterrupt;
-
-- (id)initWithSerialCommunicationManager:(PDDSerialCommunicationManager *)manager;
-- (void)serialCommandSuccess:(NSString *)command;
 
 - (void)saveLogs;
 

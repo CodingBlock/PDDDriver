@@ -61,7 +61,7 @@ static PDDDecisionManager *defaultManager;
 {
 	if( (self = [super init]) )
 	{		
-		_internalDecision = PDDDecisionMake(0.053, ArduinoAccelerationModeAccelerate, ArduinoMotorDirectionFoward, ArduinoAccelerationModeNone);
+		_internalDecision = PDDDecisionMake(0.053, ArduinoAccelerationModeNone, ArduinoMotorDirectionFoward, ArduinoSteeringModeNone);
         _previousDecision = _internalDecision;
         
         testCounter = 0;
